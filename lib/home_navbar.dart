@@ -1,6 +1,6 @@
-import 'package:dols48/home.dart';
-import 'package:dols48/member.dart';
-import 'package:dols48/profile.dart';
+import 'package:dols48/views/home.dart';
+import 'package:dols48/views/member.dart';
+import 'package:dols48/views/profile.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavbar extends StatefulWidget {
