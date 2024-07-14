@@ -1,0 +1,1 @@
+part 'register_service.dart';

@@ -1,4 +1,4 @@
-import 'package:dols48/home_navbar.dart';
+import 'package:dols48/views/utils/home_navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
