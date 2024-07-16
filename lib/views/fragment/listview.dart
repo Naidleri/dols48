@@ -39,32 +39,27 @@ class _ListUiState extends State<ListUi> {
               fontSize: 12,
             ),
           ),
-          const SizedBox(height: 8),
-          LayoutBuilder(
-            builder: (context, constraints) {
-              return Row(
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 25,
+              ),
+              SizedBox(width: 8),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CircleAvatar(
-                    radius: 25,
+                  Text(
+                    widget.member,
+                    style: GoogleFonts.poppins(
+                        color: blackColor, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(width: 8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.member,
-                        style: GoogleFonts.poppins(
-                            color: blackColor, fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        widget.detail,
-                        style: GoogleFonts.poppins(color: blackColor),
-                      ),
-                    ],
+                  Text(
+                    widget.detail,
+                    style: GoogleFonts.poppins(color: blackColor),
                   ),
                 ],
-              );
-            },
+              ),
+            ],
           ),
         ],
       ),
