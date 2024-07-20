@@ -1,5 +1,5 @@
 import 'package:dols48/views/fragment/listview.dart';
-import 'package:dols48/views/member/member.dart';
+import 'package:dols48/views/member/member_list.dart';
 import 'package:dols48/views/messages/message.dart';
 import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +18,7 @@ class _MemberPageState extends State<MemberPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: whiteColor,
           title: Text(
             "Dols48 DM",
             style: GoogleFonts.poppins(
