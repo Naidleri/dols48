@@ -39,9 +39,10 @@ class _ListUiState extends State<ListUi> {
               fontSize: 12,
             ),
           ),
+          const SizedBox(height: 5),
           Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 25,
               ),
               SizedBox(width: 8),

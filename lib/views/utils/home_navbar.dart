@@ -35,6 +35,7 @@ class _HomeNavbarState extends State<HomeNavbar> {
         ProfilPage(),
       ][_pageSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: whiteColor,
         currentIndex: _pageSelectedIndex,
         onTap: _pageSelected,
         items: const [
