@@ -1,3 +1,4 @@
+import 'package:dols48/views/fragment/button.dart';
 import 'package:dols48/views/fragment/listview.dart';
 import 'package:dols48/views/fragment/showForm.dart';
 import 'package:dols48/views/member/member_list.dart';
@@ -90,14 +91,14 @@ class _ProfileDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
+    return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           showForm('Username', 'yourusername', context),
           const SizedBox(height: 8),
-          showForm('Email', 'youremail@mail.com', context)
+          showForm('Email', 'youremail@mail.com', context),
+          PublicButton(label: 'logout', onPressed: () {})
         ],
       ),
     );
