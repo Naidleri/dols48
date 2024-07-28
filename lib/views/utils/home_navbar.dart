@@ -1,5 +1,5 @@
 import 'package:dols48/views/home.dart';
-import 'package:dols48/views/member.dart';
+import 'package:dols48/views/dm.dart';
 import 'package:dols48/views/profile.dart';
 import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class _HomeNavbarState extends State<HomeNavbar> {
   int _pageSelectedIndex = 0;
   static const List<Widget> _widget = <Widget>[
     Homepage(),
-    MemberPage(),
+    DmPage(),
     ProfilPage(),
   ];
 
@@ -31,7 +31,7 @@ class _HomeNavbarState extends State<HomeNavbar> {
     return Scaffold(
       body: <Widget>[
         Homepage(),
-        MemberPage(),
+        DmPage(),
         ProfilPage(),
       ][_pageSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
