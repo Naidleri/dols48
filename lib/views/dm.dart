@@ -1,18 +1,18 @@
 import 'package:dols48/views/fragment/listview.dart';
 import 'package:dols48/views/member/member_list.dart';
-import 'package:dols48/views/messages/message.dart';
+import 'package:dols48/views/messages/message_list.dart';
 import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MemberPage extends StatefulWidget {
-  const MemberPage({super.key});
+class DmPage extends StatefulWidget {
+  const DmPage({super.key});
 
   @override
-  State<MemberPage> createState() => _MemberPageState();
+  State<DmPage> createState() => _DmPageState();
 }
 
-class _MemberPageState extends State<MemberPage> {
+class _DmPageState extends State<DmPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
