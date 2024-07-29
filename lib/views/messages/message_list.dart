@@ -13,11 +13,13 @@ class Message extends StatefulWidget {
 class _MessageState extends State<Message> {
   @override
   Widget build(BuildContext context) {
-    return  const ListUi(
-        judul: 'Message',
-        member: 'Hayong',
-        detail: '안녕',
-     
+    return ListUi(
+      judul: 'Message',
+      member: 'Hayong',
+      detail: '안녕',
+      onTap: () {
+        ChatRoom();
+      },
     );
   }
 }
