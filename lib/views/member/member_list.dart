@@ -1,4 +1,5 @@
 import 'package:dols48/views/fragment/listview.dart';
+import 'package:dols48/views/fragment/subscription_rules.dart';
 import 'package:flutter/material.dart';
 
 class Member extends StatefulWidget {
@@ -15,6 +16,16 @@ class _MemberState extends State<Member> {
       judul: 'Member',
       member: 'Jisun',
       detail: 'Fromis9',
+      onTap: () {
+        showBottomSheet(
+            context: context,
+            builder: (context) {
+              return SubscriptionRules(
+                member: 'Jisun',
+                detail: 'Fromis9',
+              );
+            });
+      },
     );
   }
 }
