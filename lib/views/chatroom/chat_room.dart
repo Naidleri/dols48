@@ -1,3 +1,4 @@
+import 'package:dols48/views/dm.dart';
 import 'package:dols48/views/fragment/bubble_chat.dart';
 import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _ChatRoomState extends State<ChatRoom> {
     return Scaffold(
         appBar: AppBar(
           title: Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.only(left: 4.0),
             child: Text(
               "Hayong",
               style: GoogleFonts.poppins(
@@ -26,23 +27,41 @@ class _ChatRoomState extends State<ChatRoom> {
             ),
           ),
           leading: Padding(
-            padding: const EdgeInsets.only(left: 8.0),
+            padding: const EdgeInsets.only(left: 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(
-                  Icons.arrow_back,
-                  size: 14,
-                ),
-                const SizedBox(width: 8),
-                Material(
-                  color: mainRed,
-                  shape: const CircleBorder(),
-                  child: const SizedBox(
-                    width: 26,
-                    height: 26,
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_back,
+                    size: 14,
                   ),
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DmPage(),
+                      ),
+                      (_) => false,
+                    );
+                  },
                 ),
+                // ClipOval(
+                //   child: Container(
+                //     color: mainRed,
+                //     width: 24,
+                //     height: 24,
+                //     child: const Center(
+                //       child: Text(
+                //         "H", // Example initial or icon
+                //         style: TextStyle(
+                //           color: Colors.white,
+                //           fontSize: 14,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // )
               ],
             ),
           ),
