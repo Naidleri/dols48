@@ -1,6 +1,7 @@
 import 'package:dols48/views/dm.dart';
 import 'package:dols48/views/fragment/bubble_chat.dart';
 import 'package:dols48/views/utils/const.dart';
+import 'package:dols48/views/utils/home_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,20 +33,21 @@ class _ChatRoomState extends State<ChatRoom> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    size: 14,
-                  ),
-                  onPressed: () {
-                    Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DmPage(),
-                      ),
-                      (_) => false,
-                    );
-                  },
-                ),
+                    icon: Icon(
+                      Icons.arrow_back,
+                      size: 14,
+                    ),
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeNavbar(
+                            pageHalamanBack: 1,
+                          ),
+                        ),
+                        (_) => false,
+                      );
+                    }),
                 // ClipOval(
                 //   child: Container(
                 //     color: mainRed,
