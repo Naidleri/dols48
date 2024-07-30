@@ -5,7 +5,8 @@ import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavbar extends StatefulWidget {
-  const HomeNavbar({super.key});
+  final int pageHalamanBack;
+  const HomeNavbar({required this.pageHalamanBack, super.key});
 
   @override
   State<HomeNavbar> createState() => _HomeNavbarState();
@@ -13,11 +14,18 @@ class HomeNavbar extends StatefulWidget {
 
 class _HomeNavbarState extends State<HomeNavbar> {
   int _pageSelectedIndex = 0;
+
   static const List<Widget> _widget = <Widget>[
     Homepage(),
     DmPage(),
     ProfilPage(),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _pageSelectedIndex = widget.pageHalamanBack;
+  }
 
   void _pageSelected(int index) {
     setState(() {
@@ -29,11 +37,7 @@ class _HomeNavbarState extends State<HomeNavbar> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: <Widget>[
-        Homepage(),
-        DmPage(),
-        ProfilPage(),
-      ][_pageSelectedIndex],
+      body: _widget[_pageSelectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: whiteColor,
         currentIndex: _pageSelectedIndex,
