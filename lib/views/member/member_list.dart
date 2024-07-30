@@ -17,14 +17,17 @@ class _MemberState extends State<Member> {
       member: 'Jisun',
       detail: 'Fromis9',
       onTap: () {
-        showBottomSheet(
-            context: context,
-            builder: (context) {
-              return SubscriptionRules(
-                member: 'Jisun',
-                detail: 'Fromis9',
-              );
-            });
+        showModalBottomSheet(
+          backgroundColor: Colors.transparent,
+          isScrollControlled: true,
+          context: context,
+          builder: (context) {
+            return SubscriptionRules(
+              member: 'Jisun',
+              detail: 'Fromis9',
+            );
+          },
+        );
       },
     );
   }
