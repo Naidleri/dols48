@@ -1,5 +1,6 @@
 import 'package:dols48/views/utils/const.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PublicButton extends StatelessWidget {
   final String label;
@@ -22,7 +23,7 @@ class PublicButton extends StatelessWidget {
           onPressed: onPressed,
           child: Text(
             label,
-            style: const TextStyle(
+            style: GoogleFonts.poppins(
               color: Colors.white,
               fontWeight: FontWeight.w400,
             ),
