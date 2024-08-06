@@ -33,7 +33,7 @@ class _ChatRoomState extends State<ChatRoom> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back,
                       size: 14,
                     ),

@@ -1,6 +1,5 @@
 import 'package:dols48/views/chatroom/chat_room.dart';
 import 'package:dols48/views/fragment/listview.dart';
-import 'package:dols48/views/fragment/subscription_rules.dart';
 import 'package:flutter/material.dart';
 
 class Message extends StatefulWidget {
@@ -18,7 +17,13 @@ class _MessageState extends State<Message> {
       member: 'Hayong',
       detail: '안녕',
       onTap: () {
-        ChatRoom();
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatRoom(),
+          ),
+          (_) => false,
+        );
       },
     );
   }
