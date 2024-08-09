@@ -70,12 +70,13 @@ class _ProfilPageState extends State<ProfilPage>
               controller: _tabController,
               children: [
                 _ProfileDetail(),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.all(16),
                   child: ListUi(
                     judul: 'Member',
                     member: 'Gyuri',
                     detail: 'Fromis9',
+                    onTap: () {},
                   ),
                 ),
                 Text('setting'),
